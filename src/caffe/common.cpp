@@ -19,7 +19,7 @@ Caffe& Caffe::Get() {
   return *(thread_instance_.get());
 }
 
-// random seeding
+// random seeding.
 int64_t cluster_seedgen(void) {
   int64_t s, seed, pid;
   FILE* f = fopen("/dev/urandom", "rb");
