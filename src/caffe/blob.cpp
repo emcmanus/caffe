@@ -297,7 +297,9 @@ template <typename Dtype>
 Dtype Blob<Dtype>::sumsq_diff() const {
   Dtype sumsq;
   const Dtype* diff;
-  if (!diff_) { return 0; }
+  if (!diff_) {
+      return 0;
+  }
   switch (diff_->head()) {
   case SyncedMemory::HEAD_AT_CPU:
     diff = cpu_diff();
